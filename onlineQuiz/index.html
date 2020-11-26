@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>OnlineQuiz</title>
+
+</head>
+
+<body>
+  <div style="width: 650px;">
+
+    <div>
+      <button class="btn" id="home" style="float: left;"><i class="fa fa-home"></i> Home</button>
+      <button class="btn" id="dashboard" style="float: right;"><i class="fa fa-dashboard"></i> Dashboard</button>
+    </div>
+
+
+    <div id="homeDiv" class="questions ">
+      <!-- <h1>Level 12</h1> -->
+      <!-- <p>1 out of 3</p> -->
+      <!-- <button class="btn"><i class="fa fa-home"></i></button> -->
+
+
+      <h1 class="text-center element-animation1" style="font-size: 50px; ">OnlineQuiz</h1>
+      <div id='timer' style="margin-left: 500px;">
+        <!-- <h1 id='displayTime'>0</h1> -->
+        <div id="app" class="timerBody"></div>
+      </div>
+      <div id='selectTags'>
+        <select id="catSelect">
+          <option>select Category</option>
+        </select>
+        <select id="diffSelect">
+          <option>Select Difficulty</option>
+          <option value='easy'>Easy</option>
+          <option value='medium'>Medium</option>
+          <option value='hard'>Hard</option>
+        </select>
+      </div>
+
+      <h1 id="disScore">
+
+      </h1>
+      <div id="optionsDiv" class="questions">
+        <p id="question" class="question1">1.</p>
+        <form>
+          <div class="questions element-animation1">
+            <input type="radio" name="option" value="opt1" /><label id="option1"
+              class="element-animation1"></label><br />
+          </div>
+          <br>
+          <div class="questions element-animation2">
+            <input type="radio" name="option" value="opt2" /><label id="option2"
+              class="element-animation2"></label><br />
+          </div>
+          <br>
+          <div id='bol1' class="questions element-animation3">
+            <input type="radio" name="option" value="opt3" /><label id="option3"
+              class="element-animation3"></label><br />
+          </div>
+          <br>
+          <div id='bol2' class="questions element-animation4">
+            <input type="radio" name="option" value="opt4" /><label id="option4"
+              class="element-animation4"></label><br />
+          </div>
+          <br />
+        </form>
+        <div>
+          <div id='correctAns'> </div>
+          <div style="color: goldenrod; font-size: 25px; float: right;">SCORE: <label id="scoreTrack"></label></div>
+        </div>
+        <div>
+          <button id="submit" class="submit-button element-animation1">submit</button>
+        </div>
+
+      </div>
+
+      <div id='loadingDiv'>
+        <p id='loadingPara'></p>
+        <button id='startQuiz' class="submit-button element-animation1">start quiz</button>
+      </div>
+    </div>
+ 
+    <br/>
+
+    <div id='dashDiv'>
+      <div >
+        <table id='customers'>
+          <thead>
+            <tr>
+              <th>Sl.No</th>
+              <th>Category</th>
+              <th>Difficulty</th>
+              <th>Score</th>
+              <th>Status</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
+          <tbody id='tbody'>
+
+          </tbody>
+      </div>
+    </div>
+  </div>
+
+<!-- Display score -->
+  <div>
+      <h1 class="element-animation1 text-center">score &#128542 &#129321	</h1>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="timer.js"></script> -->
+</body>
+
+</html>
