@@ -29,14 +29,7 @@
       font-size: 25px;
   }
 
-  /* .questions{
-    background: black;
-    padding: 20px;
-    color: #fff;
-    border-bottom-right-radius: 55px;
-    border-top-left-radius: 55px;
-   
-} */
+ 
 
 label {
     font-size: 25px;
@@ -77,13 +70,7 @@ select {
     font-size: 35px;
 }
 
-/* .wrong {
-    color: red;
-}
-
-.correct {
-    color: green;
-} */
+ 
 
 .text-center {
     text-align: center;
