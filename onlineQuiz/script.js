@@ -173,3 +173,47 @@ function getData(x) {
 }
 
 checkData()
+
+
+homeBtn.addEventListener('click', () => {
+  homeDiv.style.display = 'block'
+  dashDiv.style.display = 'none'
+  displayLandPage()
+  if (count >= 1 && count < 9) {
+    loadingPara.innerHTML = "Invalid Attempt" + "&#129320;"
+
+    let dashObj = {
+      category: catName,
+      difficulty: difficulty,
+      score: score,
+      status: 'Invalid Attempt',
+      feedback: 'Try once again'
+    }
+
+
+
+    var localData = JSON.parse(localStorage.getItem('dashArray'))
+    console.log(localData)
+    localData.push(dashObj)
+    localStorage.setItem('dashArray', JSON.stringify(localData))
+
+
+  }
+})
+
+
+dashBtn.addEventListener('click', ()=> {
+    homeDiv.style.display = 'none'
+    dashDiv.style.display = 'block'
+  let data = JSON.parse(localStorage.getItem('dashArray'))
+
+  let tbody = document.getElementById('tbody')
+  tbody.innerHTML = ''
+
+    // 
+    for(let i=0;i<data.length;i++) {
+      var tr = document.createElement('tr')
+       tr.innerHTML = '<td>' + Number(i+1) + '<td>' + data[i].category + '<td>' + data[i].difficulty + '<td>' + data[i].score + '<td>' + data[i].status + '<td>' + data[i].feedback
+       tbody.append(tr)
+    }
+})
